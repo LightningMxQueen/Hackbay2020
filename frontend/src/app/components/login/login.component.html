@@ -1,23 +1,32 @@
-<form action="">
-    <label for="">Benutzername</label>
-<<<<<<< HEAD
-    <br>
-    <input type="text">
-    <br>
-    <label for="">Passwort</label>
-    <br>
-    <input type="text">
-    <br>
-    <button>Login</button>
-    <br>
-    <button>Passwort Vergessen?</button>
-    <br>
-=======
-    <input type="text">
-    <label for="">Passwort</label>
-    <input type="text">
-    <button>Login</button>
-    <button>Passwort Vergessen?</button>
->>>>>>> 2a1f4a295a7519cb865c251127ec2984f4c5552b
-    <button>Registrieren</button>
-</form>
+<div id="login-visual">
+    <div class="login-content">
+        <span class="salutation">Hey!</span>
+        <h1>Login</h1>
+    </div>    
+</div>
+
+<div id="login-form">
+
+    <form action="">
+        <div class="label-field">
+            <mat-form-field class="example-full-width">
+                <mat-label class="login-label">Benutzername</mat-label>
+                <input class="login-input" matInput placeholder="" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label class="login-label">Passwort</mat-label>
+                <input class="login-input" matInput placeholder="" value="">
+            </mat-form-field>
+
+            <button id="login">Login</button>
+
+            <p>Passwort vergessen?</p>
+
+            <hr>
+
+            <button id="signin">Registrieren</button>
+        </div>
+    </form>
+
+</div>

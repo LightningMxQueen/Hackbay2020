@@ -21,6 +21,7 @@ import { MoneyShopComponent } from './components/money-shop/money-shop.component
 import { SignupComponent } from './components/signup/signup.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AddFriendComponent } from './components/add-friend/add-friend.component';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { AddFriendComponent } from './components/add-friend/add-friend.component
     MatListModule,
     BottomNavModule,
     MatBottomSheetModule,
-    MatButtonModule
+    MatButtonModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent],
