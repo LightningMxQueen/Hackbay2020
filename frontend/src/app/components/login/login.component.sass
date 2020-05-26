@@ -16,28 +16,35 @@ html, body
     span 
         color: #ffffff
         font-size: 30px
-        font-family: 'Nunito'
+        font-family: Nunito
 
     h1 
         font-size: 50px
         color: #ffffff
         margin-top: 30px
-        font-family: 'Nunito'
+        font-family: Nunito
 
 #login-form
     margin: auto
     width: 50%
+    max-width: 250px
     margin-top: 50px
+
+    .mat-form-field
+        display:block
 
 
     .login-label 
         display: block
         font-size: 20px
+        color: #707070
 
     .login-input
         display: block
         font-size: 20px
         margin:10px 0px
+        color: #707070
+
 
     button
         display: block
@@ -65,10 +72,12 @@ html, body
 
     p 
         text-align: center
+        color: #707070
 
     hr 
         width: 40px
         margin-bottom: 20px
+        border-color: #eeeeee
 
     #login
         margin-bottom: 40px
@@ -76,3 +85,11 @@ html, body
     #signin
         margin-top: 40px
 
+.mat-focused .mat-form-field-label 
+    color: #00ff00
+
+.mat-form-field-underline 
+    background-color: #00ff00
+
+.mat-focused .mat-form-field-ripple 
+    background-color: #00ff00
