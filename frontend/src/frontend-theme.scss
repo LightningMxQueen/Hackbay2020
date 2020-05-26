@@ -12,20 +12,20 @@
 // hue. Available color palettes: https://material.io/design/color/
 /* For use in src/lib/core/theming/_palette.scss */
 $primarygreen: (
-    50 : #f4f9ec,
-    100 : #e3f1ce,
-    200 : #d0e8ae,
-    300 : #bddf8e,
-    400 : #aed875,
-    500 : #a0d15d,
-    600 : #98cc55,
-    700 : #8ec64b,
-    800 : #84c041,
-    900 : #73b530,
-    A100 : #fcfffa,
-    A200 : #e2ffc7,
-    A400 : #c8ff94,
-    A700 : #bbff7a,
+    50 : #f3f9eb,
+    100 : #e2f1ce,
+    200 : #cfe8ad,
+    300 : #bcdf8c,
+    400 : #add874,
+    500 : #ffffff,
+    600 : #97cc53,
+    700 : #8dc649,
+    800 : #83c040,
+    900 : #72b52f,
+    A100 : #fcfff9,
+    A200 : #e1ffc6,
+    A400 : #c7ff93,
+    A700 : #baff7a,
     contrast: (
         50 : #000000,
         100 : #000000,
@@ -43,6 +43,7 @@ $primarygreen: (
         A700 : #000000,
     )
 );
+
 
 $darkgreen: (
     50 : #ebf2e9,
@@ -112,8 +113,8 @@ $white: (
 
 
 
-$frontend-primary: mat-palette($white);
-$frontend-accent: mat-palette($darkgreen);
+$frontend-primary: mat-palette($primarygreen, 500, 100, 700);
+$frontend-accent: mat-palette($primarygreen);
 $frontend-warn: mat-palette($mat-deep-orange, A200);
 
 // Create the theme object (a Sass map containing all of the palettes).
