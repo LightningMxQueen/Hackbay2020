@@ -17,6 +17,8 @@ import { AddFriendComponent } from '../add-friend/add-friend.component';
 })
 export class MainNavComponent {
 
+  PageName: String = "Garten"
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -27,7 +29,35 @@ export class MainNavComponent {
     private breakpointObserver: BreakpointObserver,
     private _bottomSheet: MatBottomSheet,
     private router: Router,
-  ) {}
+  ) {
+    router.events.subscribe((val) => {
+      switch(this.router.url.split("/").pop()){
+        case "shop": {
+          this.PageName = "Shop";
+          document.getElementById("fab").style.display = "none";
+          break;
+        }
+        case "friends": {
+          this.PageName = "Freunde";
+          document.getElementById("fab").style.display = "block";
+          break;
+        }
+        case "todo": {
+          this.PageName = "To Do's";
+          document.getElementById("fab").style.display = "block";
+          break;
+        }
+        case "home": {
+          this.PageName = "Garten";
+          document.getElementById("fab").style.display = "block";
+          break;
+        }
+        default: {
+          document.getElementById("fab").style.display = "block";
+        }
+      }
+  });
+  }
 
   items: BottomNavItem[] = [
     {icon: 'home', label: 'Garten', routerLink: '/home'},
