@@ -24,13 +24,13 @@
     </mat-toolbar>
     
 
+    <router-outlet></router-outlet>
     <div id="bottomNavigation">
       <ngx-bottom-nav [items]="items"></ngx-bottom-nav>
     </div>
     <button mat-fab color="primary" id="fab" (click)="show_objects()">
       <mat-icon>add</mat-icon>
     </button>
-    <router-outlet></router-outlet>
     <!-- Add Content Here -->
   </mat-sidenav-content>
 </mat-sidenav-container>

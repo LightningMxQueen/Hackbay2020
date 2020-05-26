@@ -27,9 +27,9 @@ export class MainNavComponent {
 
   items: BottomNavItem[] = [
     {icon: 'home', label: 'Garten', routerLink: '/home'},
-    {icon: 'add', label: 'ToDos', routerLink: '/home'},
-    {icon: 'group', label: 'Freunde', routerLink: '/home'},
-    {icon: 'storefront', label: 'Shop', routerLink: '/home'},
+    {icon: 'add', label: 'ToDos', routerLink: '/home/todo'},
+    {icon: 'group', label: 'Freunde', routerLink: '/home/friends'},
+    {icon: 'storefront', label: 'Shop', routerLink: '/home/shop'},
   ];
 
   show_objects():void{
