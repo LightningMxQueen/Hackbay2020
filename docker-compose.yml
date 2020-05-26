@@ -5,8 +5,8 @@
         image: mongo:4.0.16
         hostname: mongodb
         container_name: mongodb
-        ports:
-          - 27017:27017
+        #ports:
+        #  - 27017:27017
       pymongo:
         build: ./backend
         hostname: pymongo
@@ -15,3 +15,9 @@
           - "5000:5000"
         depends_on:
           - mongodb
+      frontend:
+        build: ./frontend
+        hostname: frontend
+        container_name: frontend
+        ports:
+          - "80:80"

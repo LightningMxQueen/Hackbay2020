@@ -1,4 +1,4 @@
-# Hackbay2020
+# Hackbay2020 - EKKO
 
 The Repo is made for the Zollhof Hackbay 2020
 
@@ -13,6 +13,6 @@ after it was created
 * Patrick
 * Thomas
 * Arthur 
-* Alina
+* Allina
 * Lucas 
 * Sven
