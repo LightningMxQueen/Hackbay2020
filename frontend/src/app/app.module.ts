@@ -22,6 +22,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AddFriendComponent } from './components/add-friend/add-friend.component';
 import { MatInputModule } from '@angular/material/input';
+import { GardenComponent } from './components/garden/garden.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { MatInputModule } from '@angular/material/input';
     SignupComponent,
     AddTodoComponent,
     AddFriendComponent,
+    GardenComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import { ObjectShopComponent } from '../object-shop/object-shop.component';
 import { AddTodoComponent } from '../add-todo/add-todo.component';
 import { AddFriendComponent } from '../add-friend/add-friend.component';
+import { GardenComponent } from '../garden/garden.component';
 
 
 @Component({
@@ -47,7 +48,7 @@ export class MainNavComponent {
           document.getElementById("fab").style.display = "block";
           break;
         }
-        case "home": {
+        case "garden": {
           this.PageName = "Garten";
           document.getElementById("fab").style.display = "block";
           break;
@@ -60,7 +61,7 @@ export class MainNavComponent {
   }
 
   items: BottomNavItem[] = [
-    {icon: 'home', label: 'Garten', routerLink: '/home'},
+    {icon: 'home', label: 'Garten', routerLink: '/home/garden'},
     {icon: 'add', label: 'ToDos', routerLink: '/home/todo'},
     {icon: 'group', label: 'Freunde', routerLink: '/home/friends'},
     {icon: 'storefront', label: 'Shop', routerLink: '/home/shop'},
@@ -76,7 +77,7 @@ export class MainNavComponent {
         this._bottomSheet.open(AddFriendComponent);
         break;
       }
-      case "home": {
+      case "garden": {
         this._bottomSheet.open(ObjectShopComponent);
         break;
       }
