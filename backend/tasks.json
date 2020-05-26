@@ -1,0 +1,39 @@
+[ 
+    {
+    "name":"Fahrrad fahren",
+    "description":"Lass das Auto stehen und schnapp dir dein Rad. Das ist gut für die Umwelt und dich",
+    "difficulty":3,
+    "seeds":30,
+    "owntodo":false
+    },{ 
+    "name":"Regional einkaufen",
+    "description":"Kauf Produkte, die in deiner Region produziert werden, um lange Transportstrecken von Nahrungsmittel zu vermeiden",
+    "difficulty":2,
+    "seeds":20,
+    "owntodo":false
+    },{
+    "name":"Pflanze einen Baum",
+    "description":"Pflanze einen Baum an einen schönen Tag, die nächsten Generationen werden es dir danken",
+    "difficulty":5,
+    "seeds":50,
+    "owntodo":false
+    },{
+    "name":"Tüte mitnehmen",
+    "description":"Nimm dir deine eigene Tüte mit zum Einkaufen und vermeide somit Plastik in Ozeanen.",
+    "difficulty":1,
+    "seeds":10,
+    "owntodo":false
+    },{ 
+    "name":"Palmöl weglassen",
+    "description":"Palmöl ist ungesund für dich aber tödlich für Urwälder auf der ganzen Welt. Verzichte darauf und rette die Artenvielfalt",
+    "difficulty":4,
+    "seeds":10,
+    "owntodo":false
+    },{ 
+    "name":"Saisonales Festmahl",
+    "description":"Erdbeeren im Winter? Nicht mit dir, du achtest auf saisonale Produkte und hilfst somit der Umwelt sowie ökologischen Agrarwirten",
+    "difficulty":4,
+    "seeds":40,
+    "owntodo":false
+    }
+]
