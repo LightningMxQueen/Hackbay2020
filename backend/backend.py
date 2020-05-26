@@ -33,6 +33,19 @@ def check_if_user_exists(email):
         res = True
     return jsonify({"result":res})
 
+@app.route('/user/<email>/info',methods=['GET'])
+def get_basic_user_infos(email):
+    user = usersCollection.find_one({"email":email})
+    dataOutput={}
+    if user is not None:
+        dataOutput['city']=user['city']
+        dataOutput['name']=user['name']
+        dataOutput['lvl']=user['lvl']
+        dataOutput['seeds']=user['seeds']
+        dataOutput['points']=user['points']
+        return jsonify({"info":dataOutput})
+    return jsonify({"error":"User with email {0} does not exist".format(email)}),200
+
 #get the basic user infos
 @app.route('/user/<email>/overview',methods=['GET'])
 def get_user_overview(email):
@@ -87,11 +100,10 @@ def get_inventory_for_user(email):
     count = {}
     #count the number of items in the inventory
     for obj in object_ids:
-        obj_id=str(obj['_id'])
-        if(count[obj_id]):
-            count[obj_id] += 1
+        if(obj in count):
+            count[obj] += 1
         else:
-            count[obj_id] =1
+            count[obj] =1
     #return number and object name
     for key,value in count.items():
         temp = {}
@@ -221,15 +233,6 @@ def get_all_todos():
         output.append(todo)
     return jsonify({"todos":output})
 
-#add a new todo to a user
-@app.route('/todos/user',methods=['POST'])
-def add_todo_for_user():
-    dataRequest = {}
-    try:
-        dataRequest = request.get_json(force=True)
-    except :
-        return jsonify({'error':'Payload is not a valid json object'}),400
-    usersCollection.update_one({"email":dataRequest['email']},{"$addToSet":{'todos':dataRequest['todo_id']}})
 
 #create a new Todo and map to User
 @app.route('/todos/own',methods=['POST'])
