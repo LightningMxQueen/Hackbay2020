@@ -3,8 +3,11 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { BottomNavItem } from 'ngx-bottom-nav';
-import { LoginComponent} from '../login/login.component';
 import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { Router } from '@angular/router';
+import { ObjectShopComponent } from '../object-shop/object-shop.component';
+import { AddTodoComponent } from '../add-todo/add-todo.component';
+import { AddFriendComponent } from '../add-friend/add-friend.component';
 
 
 @Component({
@@ -23,6 +26,7 @@ export class MainNavComponent {
   constructor(
     private breakpointObserver: BreakpointObserver,
     private _bottomSheet: MatBottomSheet,
+    private router: Router,
   ) {}
 
   items: BottomNavItem[] = [
@@ -33,7 +37,23 @@ export class MainNavComponent {
   ];
 
   show_objects():void{
-    this._bottomSheet.open(LoginComponent);
+    switch(this.router.url.split("/").pop()){
+      case "todo": {
+        this._bottomSheet.open(AddTodoComponent);
+        break;
+      }
+      case "friends": {
+        this._bottomSheet.open(AddFriendComponent);
+        break;
+      }
+      case "home": {
+        this._bottomSheet.open(ObjectShopComponent);
+        break;
+      }
+      default: {
+        break;
+      }
+    }
   }
 
 }
