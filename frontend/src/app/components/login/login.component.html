@@ -1,15 +1,32 @@
-<form action="">
-    <label for="">Benutzername</label>
-    <br>
-    <input type="text">
-    <br>
-    <label for="">Passwort</label>
-    <br>
-    <input type="text">
-    <br>
-    <button>Login</button>
-    <br>
-    <button>Passwort Vergessen?</button>
-    <br>
-    <button>Registrieren</button>
-</form>
+<div id="login-visual">
+    <div class="login-content">
+        <span class="salutation">Hey!</span>
+        <h1>Login</h1>
+    </div>    
+</div>
+
+<div id="login-form">
+
+    <form action="">
+        <div class="label-field">
+            <mat-form-field class="example-full-width">
+                <mat-label class="login-label">Benutzername</mat-label>
+                <input class="login-input" matInput placeholder="" value="">
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label class="login-label">Passwort</mat-label>
+                <input class="login-input" matInput placeholder="" value="">
+            </mat-form-field>
+
+            <button id="login">Login</button>
+
+            <p>Passwort vergessen?</p>
+
+            <hr>
+
+            <button id="signin">Registrieren</button>
+        </div>
+    </form>
+
+</div>
