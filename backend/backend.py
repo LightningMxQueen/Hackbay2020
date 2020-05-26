@@ -31,7 +31,7 @@ def check_if_user_exists(email):
     res = False
     if user is not None:
         res = True
-    return jsonify({"result":res})
+    return jsonify(res)
 
 @app.route('/user/<email>/info',methods=['GET'])
 def get_basic_user_infos(email):

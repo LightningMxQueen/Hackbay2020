@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -15,7 +15,7 @@ import { AddFriendComponent } from '../add-friend/add-friend.component';
   templateUrl: './main-nav.component.html',
   styleUrls: ['./main-nav.component.css']
 })
-export class MainNavComponent {
+export class MainNavComponent implements OnInit{
 
   PageName: String = "Garten"
 
@@ -83,6 +83,16 @@ export class MainNavComponent {
       default: {
         break;
       }
+    }
+  }
+
+  ngOnInit():void{
+    this.redirectIfNotAuth();
+  }
+
+  redirectIfNotAuth():void{
+    if(!sessionStorage.getItem("email")){
+      this.router.navigate(['/login'])
     }
   }
 

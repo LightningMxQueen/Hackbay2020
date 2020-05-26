@@ -15,7 +15,7 @@ const routes: Routes = [
       {path:'friends', component: FriendsComponent},
       {path:'shop', component: MoneyShopComponent},
   ]},
-  {path:'**',redirectTo: 'login', pathMatch:'full'},
+  {path:'**',redirectTo: 'home', pathMatch:'full'},
 ];
 
 @NgModule({

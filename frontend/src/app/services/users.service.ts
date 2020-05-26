@@ -20,7 +20,7 @@ export class UsersService {
   checkIfUserExists(email:string):Observable<boolean>{
     return this.http
       .get<boolean>(AppSettings.API_ENDPOINT + "/user/" + email +"/exists")
-      .pipe(map(res => res['result']))
+      .pipe(map(res => res))
   }
 
   // get User overview

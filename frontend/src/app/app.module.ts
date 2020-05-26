@@ -22,6 +22,7 @@ import { SignupComponent } from './components/signup/signup.component';
 import { AddTodoComponent } from './components/add-todo/add-todo.component';
 import { AddFriendComponent } from './components/add-friend/add-friend.component';
 import { MatInputModule } from '@angular/material/input';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { MatInputModule } from '@angular/material/input';
     BottomNavModule,
     MatBottomSheetModule,
     MatButtonModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
