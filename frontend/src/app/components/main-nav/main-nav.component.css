@@ -1,0 +1,39 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+#bottomNavigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.center-bar-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#fab {
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
