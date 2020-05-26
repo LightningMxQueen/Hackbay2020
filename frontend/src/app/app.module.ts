@@ -14,12 +14,26 @@ import { BottomNavModule } from 'ngx-bottom-nav';
 import { LoginComponent } from './components/login/login.component';
 import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
 import {MatButtonModule, MatButton} from '@angular/material/button';
+import { TodoComponent } from './components/todo/todo.component';
+import { FriendsComponent } from './components/friends/friends.component';
+import { ObjectShopComponent } from './components/object-shop/object-shop.component';
+import { MoneyShopComponent } from './components/money-shop/money-shop.component';
+import { SignupComponent } from './components/signup/signup.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { AddFriendComponent } from './components/add-friend/add-friend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     LoginComponent,
+    TodoComponent,
+    FriendsComponent,
+    ObjectShopComponent,
+    MoneyShopComponent,
+    SignupComponent,
+    AddTodoComponent,
+    AddFriendComponent,
   ],
   imports: [
     BrowserModule,
