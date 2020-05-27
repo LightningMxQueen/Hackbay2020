@@ -70,8 +70,12 @@ export class UsersService {
 
   //add a new todo for User
   addNewTodo(todo:Todo):Observable<Todo>{
+    let todoooo = {
+      email: sessionStorage.getItem("email"),
+      todo_id:todo._id
+    }
     return this.http
-      .post<any>(AppSettings.API_ENDPOINT+"/user/todo",todo)
+      .post<any>(AppSettings.API_ENDPOINT+"/user/todos",todoooo)
   }
 
   //get done todos for user

@@ -24,6 +24,8 @@ import { AddFriendComponent } from './components/add-friend/add-friend.component
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 import { GardenComponent } from './components/garden/garden.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -52,7 +54,9 @@ import { GardenComponent } from './components/garden/garden.component';
     MatBottomSheetModule,
     MatButtonModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent],
