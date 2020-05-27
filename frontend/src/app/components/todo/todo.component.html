@@ -7,7 +7,7 @@
                             <img src="./assets/svg-todo/drag.svg">
                         </div>
                         <div class="todo-content-check">
-                            <img (click)="checkTodo(todo._id)" src="./assets/svg-todo/checkbox-done.svg">
+                            <img (click)="checkTodo(todo)" src="./assets/svg-todo/checkbox-done.svg">
                         </div>
                         <div class="todo-content-titel">
                             <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
@@ -22,7 +22,7 @@
 
 
 
-        <h4>Erledigt <span>( donetodos.length )</span></h4>
+        <h4>Erledigt <span>({{ donetodos.length }})</span></h4>
         <div class="todo-elements">
             <div class="todo done" *ngFor="let todo of donetodos">
                     <div class="todo-content">

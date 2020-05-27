@@ -11,8 +11,8 @@ import { UsersService } from 'src/app/services/users.service';
 })
 export class TodoComponent implements OnInit {
 
-  todos:Todo[];
-  donetodos:Todo[];
+  todos:Todo[] = [];
+  donetodos:Todo[] = [];
 
   constructor(
     private todosService:TodosService,
@@ -20,7 +20,7 @@ export class TodoComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //var todo:Todo = {difficulty: 2, name: "Test Task 2", description: "Description of Test Task 2", email:sessionStorage.getItem("email")};
+    //var todo:Todo = {difficulty: 2, name: "Test 50", description: "Description of Test Task 2", email:sessionStorage.getItem("email")};
     //this.todosService.createNewTodoForSelf(todo).subscribe( res => {});
     this.userService.getTodosOfUser().subscribe(
       res => {
@@ -35,8 +35,12 @@ export class TodoComponent implements OnInit {
     );
   }
 
-  checkTodo(_id:string):void{
-    this.userService.markTodoAsDone(_id).subscribe(res => {});
+  checkTodo(todo:Todo):void{
+    this.userService.markTodoAsDone(todo._id).subscribe(res => {});
+    this.todos = this.todos.filter(function( obj ) {
+      return obj._id!== todo._id;
+  });
+    this.donetodos = this.donetodos.concat(todo);
   }
 
 

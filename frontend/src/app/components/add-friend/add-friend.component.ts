@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-add-friend',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFriendComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private userService:UsersService,
+  ) { }
 
   ngOnInit(): void {
   }

@@ -18,7 +18,7 @@ export class FriendsComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    //this.userService.addNewFriend("thomas-test2").subscribe(res => {});
+    //this.userService.addNewFriend("test-50").subscribe(res => {});
     this.userService.getFriendsOfUser().subscribe(
       res => {
         this.friends = res;
