@@ -1,8 +1,9 @@
 export class Todo{
-    _id:string;
-    description?:string;
-    difficulty:3;
+    _id?:string;
+    email?: string;
+    description:string;
+    difficulty:number;
     name:string;
     owntodo?:boolean;
-    seeds:number;
+    seeds?:number;
 }
