@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="239.752" height="475.359" viewBox="0 0 239.752 475.359">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8c602a;
+      }
+
+      .cls-2 {
+        fill: #795423;
+      }
+
+      .cls-3 {
+        fill: #92652c;
+      }
+
+      .cls-4 {
+        fill: #e7e7e7;
+      }
+
+      .cls-5 {
+        fill: #d3d3d3;
+      }
+
+      .cls-6 {
+        fill: #f0f0f0;
+      }
+    </style>
+  </defs>
+  <g id="bäume" transform="translate(-94.14 -39.42)">
+    <g id="Gruppe_59" data-name="Gruppe 59" transform="translate(181.359 214.995)">
+      <path id="Pfad_414" data-name="Pfad 414" class="cls-1" d="M177.534,121.45,176.8,383.865,144.64,402.55l.758-262.415Z" transform="translate(-112.267 -102.765)"/>
+      <path id="Pfad_415" data-name="Pfad 415" class="cls-2" d="M164.1,140.135l-.758,262.415L130.97,383.865,131.7,121.45Z" transform="translate(-130.97 -102.765)"/>
+      <path id="Pfad_416" data-name="Pfad 416" class="cls-3" d="M195.812,132.245,163.676,150.93l-32.4-18.685,32.183-18.685Z" transform="translate(-130.546 -113.56)"/>
+    </g>
+    <g id="Gruppe_60" data-name="Gruppe 60" transform="translate(94.14 187.335)">
+      <path id="Pfad_417" data-name="Pfad 417" class="cls-4" d="M264.485,131.17l-.26,91.861L144.87,292.394l.26-91.861Z" transform="translate(-24.734 -61.807)"/>
+      <path id="Pfad_418" data-name="Pfad 418" class="cls-5" d="M214.537,200.533l-.26,91.861L94.14,223.031l.26-91.861Z" transform="translate(-94.14 -61.807)"/>
+      <path id="Pfad_419" data-name="Pfad 419" class="cls-6" d="M333.741,171.243,214.386,240.606,94.25,171.243,213.6,101.88Z" transform="translate(-93.989 -101.88)"/>
+    </g>
+    <g id="Gruppe_61" data-name="Gruppe 61" transform="translate(116.732 111.649)">
+      <path id="Pfad_420" data-name="Pfad 420" class="cls-4" d="M241.924,93.67l-.261,91.861L144.83,241.8l.26-91.837Z" transform="translate(-47.381 -37.426)"/>
+      <path id="Pfad_421" data-name="Pfad 421" class="cls-5" d="M201.39,149.947l-.26,91.837-97.45-56.267.26-91.837Z" transform="translate(-103.68 -37.413)"/>
+      <path id="Pfad_422" data-name="Pfad 422" class="cls-6" d="M298.073,126.164,201.24,182.455l-97.45-56.267L200.624,69.92Z" transform="translate(-103.529 -69.92)"/>
+    </g>
+    <g id="Gruppe_62" data-name="Gruppe 62" transform="translate(140.698 39.42)">
+      <path id="Pfad_423" data-name="Pfad 423" class="cls-4" d="M218,57.31l-.284,91.861L144.8,191.537l.26-91.837Z" transform="translate(-71.387 -14.944)"/>
+      <path id="Pfad_424" data-name="Pfad 424" class="cls-5" d="M187.473,99.7l-.26,91.837L113.8,149.171l.26-91.861Z" transform="translate(-113.8 -14.944)"/>
+      <path id="Pfad_425" data-name="Pfad 425" class="cls-6" d="M260.262,81.786l-72.939,42.39L113.91,81.786,186.849,39.42Z" transform="translate(-113.649 -39.42)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="416.559" height="454.11" viewBox="0 0 416.559 454.11">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #8c602a;
+      }
+
+      .cls-2 {
+        fill: #795423;
+      }
+
+      .cls-3 {
+        fill: #92652c;
+      }
+
+      .cls-4 {
+        fill: #fcc3fe;
+      }
+
+      .cls-5 {
+        fill: #fbabfe;
+      }
+
+      .cls-6 {
+        fill: #8b6129;
+      }
+
+      .cls-7 {
+        fill: #795422;
+      }
+
+      .cls-8 {
+        fill: #f542b9;
+      }
+
+      .cls-9 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="bäume" transform="translate(-73.07 -58.38)">
+    <g id="Gruppe_54" data-name="Gruppe 54" transform="translate(242.916 252.285)">
+      <path id="Pfad_309" data-name="Pfad 309" class="cls-1" d="M166.636,127.38,166,355.12,138.07,371.353l.64-227.771Z" transform="translate(-109.96 -111.148)"/>
+      <path id="Pfad_310" data-name="Pfad 310" class="cls-2" d="M157.589,143.582l-.64,227.771L128.84,355.12l.67-227.74Z" transform="translate(-128.84 -111.148)"/>
+      <path id="Pfad_311" data-name="Pfad 311" class="cls-3" d="M185.066,138.282l-27.927,16.2-28.079-16.2,27.9-16.232Z" transform="translate(-128.39 -122.05)"/>
+    </g>
+    <circle id="Ellipse_134" data-name="Ellipse 134" class="cls-4" cx="124.286" cy="124.286" r="124.286" transform="translate(146.984 58.38)"/>
+    <path id="Pfad_312" data-name="Pfad 312" class="cls-5" d="M253.67,281.76A124.286,124.286,0,0,1,174.792,61.42,124.255,124.255,0,1,0,300.479,272.5,123.28,123.28,0,0,1,253.67,281.76Z" transform="translate(49.516 6.218)"/>
+    <path id="Pfad_313" data-name="Pfad 313" class="cls-6" d="M142.275,242.777s123.22-8.04,136.132-95.932l-17.3-13.7s12.182,78.421-121.819,95.9Z" transform="translate(135.451 152.919)"/>
+    <circle id="Ellipse_135" data-name="Ellipse 135" class="cls-4" cx="101.079" cy="101.079" r="101.079" transform="translate(287.471 205.872)"/>
+    <path id="Pfad_314" data-name="Pfad 314" class="cls-5" d="M270.518,288.475a101.079,101.079,0,0,1-64.138-179.2,101.079,101.079,0,1,0,102.328,171.7A100.772,100.772,0,0,1,270.518,288.475Z" transform="translate(144.01 104.114)"/>
+    <path id="Pfad_315" data-name="Pfad 315" class="cls-7" d="M202.692,258.23s-115.3-44.251-101.536-132.021l20.587-7.949s-34.779,71.325,87.862,127.727Z" transform="translate(55.116 122.483)"/>
+    <path id="Pfad_512" data-name="Pfad 512" class="cls-4" d="M79.274,0A79.274,79.274,0,1,1,0,79.274,79.274,79.274,0,0,1,79.274,0Z" transform="translate(73.07 215.1)"/>
+    <path id="Pfad_316" data-name="Pfad 316" class="cls-5" d="M84.96,149.287A79.182,79.182,0,0,0,225.508,199.6,79.182,79.182,0,1,1,90.9,119.35a78.878,78.878,0,0,0-5.939,29.937Z" transform="translate(0.231 124.712)"/>
+    <circle id="Ellipse_137" data-name="Ellipse 137" class="cls-8" cx="13.583" cy="13.583" r="13.583" transform="translate(306.627 146.607)"/>
+    <circle id="Ellipse_138" data-name="Ellipse 138" class="cls-8" cx="13.583" cy="13.583" r="13.583" transform="translate(320.24 154.099)"/>
+    <circle id="Ellipse_139" data-name="Ellipse 139" class="cls-8" cx="13.583" cy="13.583" r="13.583" transform="translate(328.25 140.486)"/>
+    <circle id="Ellipse_140" data-name="Ellipse 140" class="cls-8" cx="13.583" cy="13.583" r="13.583" transform="translate(314.637 131.898)"/>
+    <circle id="Ellipse_141" data-name="Ellipse 141" class="cls-9" cx="10.476" cy="10.476" r="10.476" transform="translate(320.24 148.617)"/>
+  </g>
+</svg>

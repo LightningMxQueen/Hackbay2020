@@ -1,0 +1,6 @@
+<svg id="Check-Box" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="Rechteck_3" data-name="Rechteck 3" fill="#fff" stroke="#4fc48a" stroke-linejoin="round" stroke-width="1">
+    <rect width="30" height="30" rx="5" stroke="none"/>
+    <rect x="0.5" y="0.5" width="29" height="29" rx="4.5" fill="none"/>
+  </g>
+</svg>
