@@ -89,6 +89,21 @@ def get_todos_for_user(email):
             output.append(todo)
     return jsonify({"todos":output})
 
+#get the done todos
+@app.route('/user/<email>/donetodos',methods=['GET'])
+def get_done_todos_for_user(email):
+    user = usersCollection.find_one({"email":email})
+    if user is None:
+        return jsonify({}),200
+    todo_ids = user['todos_done']
+    output = []
+    for todo_id in todo_ids:
+        todo = todosCollection.find_one({"_id":ObjectId(todo_id)})
+        if todo is not None:
+            todo['_id']=str(todo['_id'])
+            output.append(todo)
+    return jsonify({"todos":output})
+
 #Get the inventory for the User
 @app.route('/user/<email>/inventory',methods=['GET'])
 def get_inventory_for_user(email):
@@ -135,6 +150,7 @@ def register_user():
     dataInsert['todos']=[]
     dataInsert['habits']=[]
     dataInsert['inventory']=[]
+    dataInsert['todos_done']=[]
     user = usersCollection.insert_one(dataInsert)
     return jsonify({'result':"User was created with the id {0}".format(str(user.inserted_id))})
 
@@ -159,6 +175,7 @@ def add_todo_to_a_user():
         return jsonify({'error':'Payload is not a valid json object'}),400
     usersCollection.update_one({"email":dataRequest['email']},{"$addToSet":{'todos':dataRequest['todo_id']}})
     return jsonify({"message":"{0} successfully added todo with id {1}".format(dataRequest['email'],dataRequest['todo_id'])})
+
 
 """
 Garden Management
@@ -253,6 +270,47 @@ def create_own_todo_for_user():
     usersCollection.update_one({"email":dataRequest['email']},{"$addToSet":{'todos':str(todo.inserted_id)}})
     return jsonify({"message":"Jo passt"})
 
+#mark a todo as done
+@app.route('/todos/check',methods=['POST'])
+def complete_todo():
+    dataRequest = {}
+    try:
+        dataRequest = request.get_json(force=True)
+    except :
+        return jsonify({'error':'Payload is not a valid json object'}),400
+    dataRequest['email']
+    dataRequest['todo_id']
+    #get the todo
+    todo = todosCollection.find_one({"_id":ObjectId(dataRequest['todo_id'])})
+    if todo is None:
+        return jsonify({})
+    seeds = todo['seeds']
+    todoName = todo['name']
+    points = todo['difficulty']
+    #remove the todo from todos and add to done todos
+    user = usersCollection.find_one({"email":dataRequest['email']})
+    if user is None:
+        return jsonify({})
+    
+    points_needed_to_upgrade = user['lvl'] * 10
+    newPoints = user['points'] + points
+
+    #If the user reaches a new level, upgrade and reset the points
+    if newPoints > points_needed_to_upgrade:
+        usersCollection.update_one({"email":dataRequest},{"$inc":{"lvl":1}})
+        newPoints = newPoints - points_needed_to_upgrade
+    
+    #Mark Todo as done
+    #set new points
+    #reward user with seeds
+    usersCollection.update_one({"email":dataRequest['email']},
+        {"$pull":{"todos":dataRequest['todo_id']},
+        "$push":{"todos_done":dataRequest['todo_id']},
+        "$set":{"points": newPoints},
+        "$inc":{"seeds":seeds}})
+    return jsonify({"message":"Todo {0} is marked as done".format(todoName)})
+    
+    
 
 """
 Admin Routes for Creating special Stuff
