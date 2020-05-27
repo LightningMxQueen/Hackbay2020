@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/users.service';
-import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-login',
@@ -53,7 +52,7 @@ export class LoginComponent implements OnInit {
     setTimeout( () => {
       document.getElementById("gifLogin").style.display = "none";
       document.getElementById("contentLogin").style.display = "block";
-    }, 2000 );
+    }, 1000 );
   }
 
 }
