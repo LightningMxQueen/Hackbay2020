@@ -1,5 +1,5 @@
-<label for="" #email>E-Mail</label>
+<label for="">E-Mail</label>
 <br>
-<input type="text">
+<input type="text" #email>
 <br>
-<button>Hinzufügen</button>
+<button (click)="addFriend(email.value)">Hinzufügen</button>
