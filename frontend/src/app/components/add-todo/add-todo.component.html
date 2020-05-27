@@ -1,1 +1,27 @@
-<p>add-todo works!</p>
+<div class="grid-container">
+   
+    <mat-grid-list 
+    cols=1
+    rowHeight=200px
+    rowWidth=400px>
+    
+    <mat-grid-tile colspan="1" rowspan="1">
+        <mat-card  class="dashboard-card">
+            <mat-card-title class="dashboard-card-content">
+              Eigenes Todo erstellen
+            </mat-card-title>
+        </mat-card>
+      </mat-grid-tile> 
+
+      <mat-grid-tile *ngFor="let todo of availableTodos | async " colspan="1" rowspan="1">
+        <mat-card (click)="addTodo(todo)" class="dashboard-card">
+            <mat-card-title class="dashboard-card-content">
+              {{todo.name}}
+            </mat-card-title>
+        </mat-card>
+      </mat-grid-tile> 
+
+
+    </mat-grid-list>
+
+</div>

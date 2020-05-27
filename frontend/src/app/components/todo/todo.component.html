@@ -1,17 +1,17 @@
 <div class="list-view">
-        <h4>Offen <span>( 1 )</span></h4>
+        <h4>Offen <span>( {{todos.length}} )</span></h4>
         <div class="todo-elements">
-            <div class="todo">
+            <div class="todo" *ngFor="let todo of todos">
                     <div class="todo-content">
                         <div class="handle">
                             <img src="./assets/svg-todo/drag.svg">
                         </div>
                         <div class="todo-content-check">
-                            <img src="./assets/svg-todo/checkbox-done.svg">
+                            <img (click)="checkTodo(todo)" src="./assets/svg-todo/checkbox-done.svg">
                         </div>
                         <div class="todo-content-titel">
                             <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                            <p class="todo-title">Name des To-Do's</p>
+                            <p class="todo-title">{{ todo.name }}</p>
                         </div>
                         <div class="delete">
                             <span>Löschen</span>
@@ -22,9 +22,9 @@
 
 
 
-        <h4>Erledigt <span>( 1 )</span></h4>
+        <h4>Erledigt <span>({{ donetodos.length }})</span></h4>
         <div class="todo-elements">
-            <div class="todo done">
+            <div class="todo done" *ngFor="let todo of donetodos">
                     <div class="todo-content">
                         <div class="handle">
                             <img src="./assets/svg-todo/drag.svg">
@@ -34,7 +34,7 @@
                         </div>
                         <div class="todo-content-titel">
                             <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                            <p class="todo-title">Name des To-Do's</p>
+                            <p class="todo-title">{{ todo.name }}</p>
                         </div>
                         <div class="delete">
                             <span>Löschen</span>

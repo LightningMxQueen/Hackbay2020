@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UsersService } from 'src/app/services/users.service';
+import { TodosService } from 'src/app/services/todos.service';
+import { User,Friend, UserRegistration } from 'src/app/models/User';
 
 @Component({
   selector: 'app-friends',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FriendsComponent implements OnInit {
 
-  constructor() { }
+  friends:Friend[];
+  
+  constructor(
+    private todosService:TodosService,
+    private userService:UsersService,
+  ) { }
 
   ngOnInit(): void {
+    //this.userService.addNewFriend("test-50").subscribe(res => {});
+    this.userService.getFriendsOfUser().subscribe(
+      res => {
+        this.friends = res;
+      }
+    );
+  }
+
+  calculateUserProgress(level:number, points:number){
+    return (points/(level*10))*100;
   }
 
 }

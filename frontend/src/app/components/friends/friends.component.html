@@ -1,95 +1,20 @@
 <div class="friends-view">
 
         <div class="friends-elements">
-                <div class="friend">
+                <div class="friend" *ngFor="let friend of friends">
                     <div class="friend-content">
                             
                         <div class="friend-content-titel">
                             <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                            <p class="friend-title">Patrick</p>
-                            <p class="friend-level">Lvl. 6</p>
-                            <div class="friend-progressbar" style="width:50%"></div>
+                            <p class="friend-title">{{friend.name}} <br> {{friend.city}}</p>
+                            <p class="friend-level">Lvl. {{ friend.lvl }}</p>
+                            <div class="friend-progressbar" style="width:{{calculateUserProgress(friend.lvl, friend.points)}}%"></div>
                         </div>
                         <div class="showFriend">
                             <span>></span>
                         </div>
                     </div>
                 </div>
-
-                <div class="friend">
-                        <div class="friend-content">
-                                
-                            <div class="friend-content-titel">
-                                <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                                <p class="friend-title">Allina</p>
-                                <p class="friend-level">Lvl. 3</p>
-                                <div class="friend-progressbar" style="width:70%"></div>
-                            </div>
-                            <div class="showFriend">
-                                <span>></span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="friend">
-                            <div class="friend-content">
-                                    
-                                <div class="friend-content-titel">
-                                    <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                                    <p class="friend-title">Arthur</p>
-                                    <p class="friend-level">Lvl. 15</p>
-                                    <div class="friend-progressbar" style="width:20%"></div>
-                                </div>
-                                <div class="showFriend">
-                                    <span>></span>
-                                </div>
-                            </div>
-                    </div>
-
-                    <div class="friend">
-                            <div class="friend-content">
-                                    
-                                <div class="friend-content-titel">
-                                    <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                                    <p class="friend-title">Lucas</p>
-                                    <p class="friend-level">Lvl. 7</p>
-                                    <div class="friend-progressbar" style="width:35%"></div>
-                                </div>
-                                <div class="showFriend">
-                                    <span>></span>
-                                </div>
-                            </div>
-                    </div>
-
-                    <div class="friend">
-                            <div class="friend-content">
-                                    
-                                <div class="friend-content-titel">
-                                    <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                                    <p class="friend-title">Sven</p>
-                                    <p class="friend-level">Lvl. 35</p>
-                                    <div class="friend-progressbar" style="width:85%"></div>
-                                </div>
-                                <div class="showFriend">
-                                    <span>></span>
-                                </div>
-                            </div>
-                    </div>
-
-                    <div class="friend">
-                            <div class="friend-content">
-                                    
-                                <div class="friend-content-titel">
-                                    <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
-                                    <p class="friend-title">Thomas</p>
-                                    <p class="friend-level">Lvl. 17</p>
-                                    <div class="friend-progressbar" style="width:62%"></div>
-                                </div>
-                                <div class="showFriend">
-                                    <span>></span>
-                                </div>
-                            </div>
-                    </div>
             </div>
 
 </div>
