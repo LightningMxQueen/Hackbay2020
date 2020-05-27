@@ -8,7 +8,7 @@
                             <!--<input type="text" placeholder="Name des ToDO-Punkts">-->
                             <p class="friend-title">{{friend.name}} <br> {{friend.city}}</p>
                             <p class="friend-level">Lvl. {{ friend.lvl }}</p>
-                            <div class="friend-progressbar" style="width:50%"></div>
+                            <div class="friend-progressbar" style="width:{{calculateUserProgress(friend.lvl, friend.points)}}%"></div>
                         </div>
                         <div class="showFriend">
                             <span>></span>

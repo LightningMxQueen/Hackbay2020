@@ -27,7 +27,7 @@ export class FriendsComponent implements OnInit {
   }
 
   calculateUserProgress(level:number, points:number){
-    return points/(level*10);
+    return (points/(level*10))*100;
   }
 
 }
