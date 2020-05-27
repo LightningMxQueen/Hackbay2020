@@ -12,6 +12,7 @@ import { UsersService } from 'src/app/services/users.service';
 export class TodoComponent implements OnInit {
 
   todos:Todo[];
+  donetodos:Todo[];
 
   constructor(
     private todosService:TodosService,
@@ -26,6 +27,18 @@ export class TodoComponent implements OnInit {
         this.todos = res;
       }
     );
+
+    this.userService.getDoneTodosOfUser().subscribe(
+      res => {
+        this.donetodos = res;
+      }
+    );
   }
+
+  checkTodo(_id:string):void{
+    this.userService.markTodoAsDone(_id).subscribe(res => {});
+  }
+
+
 
 }
