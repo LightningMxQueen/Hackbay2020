@@ -71,6 +71,7 @@ def get_friends_of_user(email):
             tempRes['email']=friendInfo['email']
             tempRes['lvl']=friendInfo['lvl']
             tempRes['city']=friendInfo['city']
+            tempRes['points']=friendInfo['points']
             output.append(tempRes)
     return jsonify({"result":output})
 
