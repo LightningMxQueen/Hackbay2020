@@ -1,8 +1,31 @@
+<div class="garden-content">
+    <p class="user-level">Seeds {{ user.seeds }}</p>
+    <p class="user-level">Lvl. {{ user.lvl }}</p>
+    <div class="user-progressbar" style="width:{{calculateUserProgress(user.lvl, user.points)}}%"></div>
+</div>
+
 <div id="wrapper-center">
-    <mat-grid-list id="grid-div">
-        <img src="assets/svg/Gras.svg" widht="100" height="100">
-        <img src="assets/svg/Gras.svg" widht="100" height="100">
-        <img src="assets/svg/Gras.svg" widht="100" height="100">
-        <img src="assets/svg/Gras.svg" widht="100" height="100">
-    </mat-grid-list>
+    
+    <div id="grid-div">
+        <img (click)="openShopForField()" src="assets/svg/Gras.svg" width="100" height="100" style="top:0px;right:0px">
+
+        <img (click)="openShopForField()" *ngIf="user.lvl>=2" src="assets/svg/Gras.svg" width="100" height="100" style="top:25px;right:43px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=2" src="assets/svg/Gras.svg" width="100" height="100 " style="top:25px;right:-43px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=2" src="assets/svg/Gras.svg" width="100" height="100" style="top:50px;right:0px">
+
+        <img (click)="openShopForField()" *ngIf="user.lvl>=3" src="assets/svg/Gras.svg" width="100" height="100" style="top:50px;right:86px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=3" src="assets/svg/Gras.svg" width="100" height="100" style="top:50px;right:-86px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=3" src="assets/svg/Gras.svg" width="100" height="100" style="top:75px;right:-43px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=3" src="assets/svg/Gras.svg" width="100" height="100" style="top:75px;right:43px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=3" src="assets/svg/Gras.svg" width="100" height="100" style="top:100px;right:0px">
+
+        <img (click)="openShopForField()" *ngIf="user.lvl>=4" src="assets/svg/Gras.svg" width="100" height="100" style="top:75px;right:129px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=4" src="assets/svg/Gras.svg" width="100" height="100" style="top:75px;right:-129px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=4" src="assets/svg/Gras.svg" width="100" height="100" style="top:100px;right:-86px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=4" src="assets/svg/Gras.svg" width="100" height="100" style="top:100px;right:86px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=4" src="assets/svg/Gras.svg" width="100" height="100" style="top:125px;right:43px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=4" src="assets/svg/Gras.svg" width="100" height="100" style="top:125px;right:-43px">
+        <img (click)="openShopForField()" *ngIf="user.lvl>=4" src="assets/svg/Gras.svg" width="100" height="100" style="top:150px;right:0px">
+        
+    </div>
 </div>

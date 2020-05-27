@@ -43,6 +43,11 @@ export class TodoComponent implements OnInit {
     this.donetodos = this.donetodos.concat(todo);
   }
 
-
+  deleteTodo(todo:Todo):void{
+    console.log("TEST");
+    this.donetodos = this.donetodos.filter(function( obj ) {
+      return obj._id!== todo._id;
+  });
+  }
 
 }

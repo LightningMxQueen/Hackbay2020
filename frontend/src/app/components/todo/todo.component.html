@@ -37,7 +37,7 @@
                             <p class="todo-title">{{ todo.name }}</p>
                         </div>
                         <div class="delete">
-                            <span>Löschen</span>
+                            <span (click)="deleteTodo(todo)">Löschen</span>
                         </div>
                     </div>
                 </div>
