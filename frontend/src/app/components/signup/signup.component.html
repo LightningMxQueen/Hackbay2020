@@ -10,21 +10,26 @@
         <form action="">
             <div class="label-field">
                 <mat-form-field style="display:block !important" class="example-full-width login-field">
-                    <mat-label class="signin-label">Deine E-Mailadresse</mat-label>
-                    <input type="email" class="signin-input" matInput placeholder="" #email value="">
+                    <mat-label class="signin-label">Dein Benutzername</mat-label>
+                    <input type="text" class="signin-input" matInput placeholder="" #username value="">
                 </mat-form-field>
     
                 <mat-form-field style="display:block !important" class="example-full-width login-field">
-                    <mat-label class="signin-label">Dein Passwort</mat-label>
-                    <input type="password" class="signin-input" matInput placeholder="" value="">
+                    <mat-label class="signin-label">Deine E-Mail</mat-label>
+                    <input type="email" class="signin-input" matInput placeholder="" #email value="">
                 </mat-form-field>
 
                 <mat-form-field style="display:block !important" class="example-full-width login-field">
                     <mat-label class="signin-label">Dein Passwort</mat-label>
                     <input type="password" class="signin-input" matInput placeholder="" value="">
                 </mat-form-field>
+
+                <mat-form-field style="display:block !important" class="example-full-width login-field">
+                    <mat-label class="signin-label">Deine Stadt</mat-label>
+                    <input type="text" class="signin-input" matInput placeholder="" #city value="">
+                </mat-form-field>
     
-                <button id="signin" (click)="register_user(email.value)">Registrieren</button>
+                <button id="signin" (click)="register_user(email.value, username.value, city.value)">Registrieren</button>
     
             </div>
         </form>

@@ -18,9 +18,9 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  register_user(email:string):void{
+  register_user(email:string, username:string, city:string):void{
     if (email===""){return}
-    var user:UserRegistration = {name:"name", email:email, city:"nuremberg"};
+    var user:UserRegistration = {name:username, email:email, city:city};
     this.userService.createNewUser(user).subscribe(
       res => {
         if(res){

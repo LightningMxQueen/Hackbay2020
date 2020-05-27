@@ -14,13 +14,18 @@
         <div class="label-field">
             <mat-form-field style="display: block !important" class="example-full-width login-field">
                 <mat-label class="login-label">Benutzername</mat-label>
-                <input type="email" class="login-input" matInput #email placeholder="" value="">
+                <input type="text" class="login-input" matInput #email placeholder="" value="">
             </mat-form-field>
             <mat-form-field style="display:block !important" class="example-full-width login-field">
                 <mat-label class="login-label">Passwort</mat-label>
                 <input type="password" class="login-input" matInput placeholder="" value="">
             </mat-form-field>
             <button (click)="login(email.value)" id="login">Login</button>
+            <p>Passwort vergessen?</p>
+
+            <hr>
+
+            <button id="signin" routerLink="/signup">Registrieren</button>
         </div>
 
 
