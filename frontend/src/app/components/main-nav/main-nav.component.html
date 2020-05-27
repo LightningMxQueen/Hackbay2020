@@ -11,7 +11,7 @@
       <a mat-list-item routerLink="/home" >Magazin</a>
       <a mat-list-item routerLink="/home" >Einstellungen</a>
       <a mat-list-item routerLink="/home" >Hilfe</a>
-      <a mat-list-item routerLink="/login" >Logout</a>
+      <a mat-list-item routerLink="/login" (click)="logout()">Logout</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

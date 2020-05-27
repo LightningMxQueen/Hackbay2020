@@ -1,19 +1,28 @@
-<div id="login-visual">
-    <div class="login-content">
-        <span class="salutation">Hey!</span>
-        <h1>Login</h1>
-    </div>    
+<div id="gifLogin">
+    <img src="assets/intro.gif">
 </div>
+<div id="contentLogin">
+    <div id="login-visual">
+        <div class="login-content">
+            <span class="salutation">Hey!</span>
+            <h1>Login</h1>
+        </div>
+    </div>
 
-<div id="login-form">
+    <div id="login-form">
 
         <div class="label-field">
             <mat-form-field style="display: block !important" class="example-full-width login-field">
                 <mat-label class="login-label">Benutzername</mat-label>
-                <input class="login-input" matInput #email placeholder="" value="">
+                <input type="email" class="login-input" matInput #email placeholder="" value="">
+            </mat-form-field>
+            <mat-form-field style="display:block !important" class="example-full-width login-field">
+                <mat-label class="login-label">Passwort</mat-label>
+                <input type="password" class="login-input" matInput placeholder="" value="">
             </mat-form-field>
             <button (click)="login(email.value)" id="login">Login</button>
         </div>
 
 
+    </div>
 </div>

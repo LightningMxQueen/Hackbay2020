@@ -11,20 +11,20 @@
             <div class="label-field">
                 <mat-form-field style="display:block !important" class="example-full-width login-field">
                     <mat-label class="signin-label">Deine E-Mailadresse</mat-label>
-                    <input class="signin-input" matInput placeholder="" value="">
+                    <input type="email" class="signin-input" matInput placeholder="" #email value="">
                 </mat-form-field>
     
                 <mat-form-field style="display:block !important" class="example-full-width login-field">
                     <mat-label class="signin-label">Dein Passwort</mat-label>
-                    <input class="signin-input" matInput placeholder="" value="">
+                    <input type="password" class="signin-input" matInput placeholder="" value="">
                 </mat-form-field>
 
                 <mat-form-field style="display:block !important" class="example-full-width login-field">
                     <mat-label class="signin-label">Dein Passwort</mat-label>
-                    <input class="signin-input" matInput placeholder="" value="">
+                    <input type="password" class="signin-input" matInput placeholder="" value="">
                 </mat-form-field>
     
-                <button id="signin">Registrieren</button>
+                <button id="signin" (click)="register_user(email.value)">Registrieren</button>
     
             </div>
         </form>

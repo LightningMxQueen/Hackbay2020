@@ -87,6 +87,10 @@ export class MainNavComponent implements OnInit{
     }
   }
 
+  logout():void{
+    sessionStorage.clear();
+  }
+
   ngOnInit():void{
     this.redirectIfNotAuth();
   }
