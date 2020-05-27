@@ -8,7 +8,9 @@ from datetime import date,datetime,timedelta
 
 #configs and wrappers for flask app 
 app = Flask(__name__)
-app.config['MONGO_URI']="mongodb://0.0.0.0:27017/garten"
+#For docker-compose use with host=mongodb
+app.config['MONGO_URI']="mongodb://mongodb:27017/garten"
+#app.config['MONGO_URI']="mongodb://0.0.0.0:27017/garten"
 app.config['DEBUG']=True
 CORS(app)
 mongo = PyMongo(app)
@@ -381,4 +383,6 @@ def check_if_field_is_empty(userId,x,y):
 
 #Make Script executable
 if __name__ == "__main__":
-    app.run(port=5000)
+    #for docker-compose use with host=0.0.0.0
+    app.run(port=5000,host='0.0.0.0',threaded=True)
+    #app.run(port=5000,threaded=True)

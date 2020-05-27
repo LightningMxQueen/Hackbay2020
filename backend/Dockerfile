@@ -8,7 +8,6 @@ RUN pip3 install -r requirements.txt
 
 #get the rest of the code
 COPY ./backend.py /app/backend.py 
-COPY ./backend_config_dev.cfg /app/backend_config_dev.cfg
 
 #start the app
 ENTRYPOINT ["python"]
