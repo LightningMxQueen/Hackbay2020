@@ -17,4 +17,5 @@ export class Friend{
     email:string;
     city:string;
     lvl:number;
+    points:number;
 }

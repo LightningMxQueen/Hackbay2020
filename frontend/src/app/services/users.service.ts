@@ -40,7 +40,7 @@ export class UsersService {
   //get the todos of a User 
   getTodosOfUser():Observable<Todo[]>{
     return this.http
-      .get<Todo[]>(AppSettings.API_ENDPOINT +"/user/"+ sessionStorage.getItem("email") + "/todo")
+      .get<Todo[]>(AppSettings.API_ENDPOINT +"/user/"+ sessionStorage.getItem("email") + "/todos")
       .pipe(map(res => res['todos']))
   }
 
@@ -74,6 +74,18 @@ export class UsersService {
       .post<any>(AppSettings.API_ENDPOINT+"/user/todo",todo)
   }
 
+  //get done todos for user
+  getDoneTodosOfUser():Observable<Todo[]>{
+    return this.http
+      .get<Todo[]>(AppSettings.API_ENDPOINT +"/user/"+ sessionStorage.getItem("email") + "/donetodos")
+      .pipe(map(res => res['todos']))
+  }
 
-
+  //move todo of user to done
+  markTodoAsDone(todoId:string):Observable<string>{
+    let item = {email: sessionStorage.getItem("email"), todo_id: todoId};
+    return this.http.post<any>(
+      AppSettings.API_ENDPOINT + "/todos/check", item
+    );
+  }
 }

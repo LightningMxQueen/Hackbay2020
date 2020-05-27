@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TodosService } from 'src/app/services/todos.service';
 import { Todo } from '../../models/Todo';
+import { User } from '../../models/User';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-todo',
@@ -9,20 +11,19 @@ import { Todo } from '../../models/Todo';
 })
 export class TodoComponent implements OnInit {
 
-  todos;
+  todos:Todo[];
 
   constructor(
-    private todosService:TodosService
+    private todosService:TodosService,
+    private userService:UsersService,
   ) { }
 
   ngOnInit(): void {
     //var todo:Todo = {difficulty: 2, name: "Test Task 2", description: "Description of Test Task 2", email:sessionStorage.getItem("email")};
     //this.todosService.createNewTodoForSelf(todo).subscribe( res => {});
-    this.todosService.getAllTodos().subscribe(
+    this.userService.getTodosOfUser().subscribe(
       res => {
         this.todos = res;
-        console.log(res);
-        console.log(this.todos.todos);
       }
     );
   }
