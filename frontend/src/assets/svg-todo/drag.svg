@@ -1,0 +1,10 @@
+<svg id="Drag_Handle" data-name="Drag Handle" xmlns="http://www.w3.org/2000/svg" width="20" height="33" viewBox="0 0 20 33">
+  <circle id="Ellipse_2" data-name="Ellipse 2" cx="4.5" cy="4.5" r="4.5" transform="translate(11)" fill="#68917d"/>
+  <circle id="Ellipse_4" data-name="Ellipse 4" cx="4.5" cy="4.5" r="4.5" transform="translate(11 12)" fill="#68917d"/>
+  <g id="Drag_Handle-2" data-name="Drag Handle">
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="4.5" cy="4.5" r="4.5" fill="#68917d"/>
+    <circle id="Ellipse_3" data-name="Ellipse 3" cx="4.5" cy="4.5" r="4.5" transform="translate(0 12)" fill="#68917d"/>
+    <circle id="Ellipse_5" data-name="Ellipse 5" cx="4.5" cy="4.5" r="4.5" transform="translate(0 24)" fill="#68917d"/>
+    <circle id="Ellipse_6" data-name="Ellipse 6" cx="4.5" cy="4.5" r="4.5" transform="translate(11 24)" fill="#68917d"/>
+  </g>
+</svg>

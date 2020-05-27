@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="578.768" height="537.871" viewBox="0 0 578.768 537.871">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #5dc8d1;
+      }
+
+      .cls-2 {
+        fill: #f7e349;
+      }
+    </style>
+  </defs>
+  <g id="Gruppe_8" data-name="Gruppe 8" transform="translate(-100.317 -244.27)">
+    <ellipse id="Ellipse_42" data-name="Ellipse 42" class="cls-1" cx="92.482" cy="120.938" rx="92.482" ry="120.938" transform="translate(333.88 244.27) rotate(11)"/>
+    <ellipse id="Ellipse_40" data-name="Ellipse 40" class="cls-1" cx="92.482" cy="120.938" rx="92.482" ry="120.938" transform="translate(570.366 334.967) rotate(54)"/>
+    <ellipse id="Ellipse_41" data-name="Ellipse 41" class="cls-1" cx="92.482" cy="120.938" rx="92.482" ry="120.938" transform="translate(627.679 651.352) rotate(135)"/>
+    <ellipse id="Ellipse_44" data-name="Ellipse 44" class="cls-1" cx="92.482" cy="120.938" rx="92.482" ry="120.938" transform="matrix(-0.857, -0.515, 0.515, -0.857, 318.334, 757.466)"/>
+    <ellipse id="Ellipse_45" data-name="Ellipse 45" class="cls-1" cx="92.482" cy="120.938" rx="92.482" ry="120.938" transform="translate(402.137 475.932) rotate(135)"/>
+    <ellipse id="Ellipse_43" data-name="Ellipse 43" class="cls-2" cx="85" cy="92.5" rx="85" ry="92.5" transform="translate(294.544 409.427)"/>
+  </g>
+</svg>
